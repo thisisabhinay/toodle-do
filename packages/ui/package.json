@@ -4,7 +4,8 @@
   "private": true,
   "exports": {
     "./styles.css": "./dist/index.css",
-    "./button": "./src/button.tsx"
+    "./components": "./src/components/index.ts",
+    "./hooks": "./src/hooks/index.ts"
   },
   "scripts": {
     "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
@@ -30,5 +31,14 @@
   "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.427.0",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
   }
 }

@@ -1,6 +1,7 @@
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const { ModuleFederationPlugin } = require("webpack").container
+const deps = require("./package.json").dependencies
 
 module.exports = {
   entry: ["./src/index.ts"],
@@ -53,6 +54,17 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         "./DashboardIndex": "./src/DashboardApp"
+      },
+      shared: {
+        ...deps,
+        "react": {
+          singleton: true,
+          requiredVersion: deps.react
+        },
+        "react-dom": {
+          singleton: true,
+          requiredVersion: deps["react-dom"]
+        }
       }
     }),
     new HtmlWebpackPlugin({

@@ -10,7 +10,7 @@ interface ButtonProps {
 const Button = ({ children, className, appName }: ButtonProps) => {
   return (
     <button
-      className={`ui-text-white ui-bg-blue-600 hover:ui-bg-blue-800 focus:ui-ring-4 focus:ui-ring-blue-300 ui-font-medium ui-rounded-lg ui-text-sm ui-px-5 ui-py-2.5 ui-me-2 ui-mb-2 dark:ui-bg-blue-600 dark:hover:bg-blue-700 focus:ui-outline-none dark:focus:ring-blue-800 ${className}`}
+      className={`text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 ${className}`}
       onClick={() => alert(`Hello from your ${appName} app!`)}
     >
       {children}

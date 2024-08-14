@@ -49,11 +49,11 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "shell",
+      name: "dashboard",
       filename: "remoteEntry.js",
-      remotes: {
-        dashboard: "dashboard@http://localhost:4001/remoteEntry.js",
-      },
+      exposes: {
+        "./DashboardIndex": "./src/DashboardApp"
+      }
     }),
     new HtmlWebpackPlugin({
       template: "./src/index.html"
@@ -64,6 +64,6 @@ module.exports = {
       directory: path.join(__dirname, "public")
     },
     compress: true,
-    port: 4000
+    port: 4001
   }
 }

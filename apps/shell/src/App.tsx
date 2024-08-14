@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Button } from '@repo/ui/button';
+import Button from '@repo/ui/button';
 
 const App: React.FC = () => {
   return (

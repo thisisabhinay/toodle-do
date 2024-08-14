@@ -1,11 +1,10 @@
-"use client";
-
-import { ReactNode } from "react";
+// eslint-disable-next-line no-redeclare
+import * as React from "react"
 
 interface ButtonProps {
-  children: ReactNode;
-  className?: string;
-  appName: string;
+  children: React.ReactNode
+  className?: string
+  appName: string
 }
 
 export const Button = ({ children, className, appName }: ButtonProps) => {

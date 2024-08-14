@@ -1,4 +1,11 @@
-export function {{ pascalCase name }}({ children }: { children: React.ReactNode }) {
+// eslint-disable-next-line no-redeclare
+import * as React from "react"
+
+interface {{ pascalCase name }}Props {
+  children: React.ReactNode
+}
+
+export function {{ pascalCase name }}({ children }: {{ pascalCase name }}Props) {
   return (
     <div>
       <h1>{{ pascalCase name }} Component</h1>

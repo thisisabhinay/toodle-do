@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Button } from '@repo/ui/button';
 
 const App: React.FC = () => {
   return (
@@ -6,6 +7,7 @@ const App: React.FC = () => {
       <h1 className="text-3xl font-semibold text-red-500">
         Hello, React with Webpack, TypeScript, and JavaScript!
       </h1>
+      <Button appName="Example">Click</Button>
     </div>
   )
 }

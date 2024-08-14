@@ -6,10 +6,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    clean: true,
+    clean: true
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".json"]
   },
   module: {
     rules: [
@@ -17,34 +17,45 @@ module.exports = {
         test: /\.m?js/,
         type: "javascript/auto",
         resolve: {
-          fullySpecified: false,
-        },
+          fullySpecified: false
+        }
       },
       {
         test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
-        use: ["ts-loader", "babel-loader"],
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                "@babel/preset-env",
+                "@babel/preset-react",
+                "@babel/preset-typescript"
+              ]
+            }
+          }
+        ]
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        use: ["style-loader", "css-loader", "postcss-loader"]
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
-      },
-    ],
+        type: "asset/resource"
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-    }),
+      template: "./src/index.html"
+    })
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, "public"),
+      directory: path.join(__dirname, "public")
     },
     compress: true,
-    port: 4000,
-  },
+    port: 4000
+  }
 }

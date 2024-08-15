@@ -1,9 +1,10 @@
-import React, { lazy } from "react"
+import React, { lazy, Suspense } from "react"
 import { Route, Routes } from "react-router-dom"
 import sidebarList from "../config/sidebar"
 import Sidebar from "./sidebar"
 
 const DashboardApp = lazy(() => import("dashboard/DashboardIndex"))
+const InboxApp = lazy(() => import("inbox/InboxIndex"))
 
 const ShellApp: React.FC = () => {
   return (
@@ -16,14 +17,16 @@ const ShellApp: React.FC = () => {
       </div>
 
       <div className="p-10">
-        <Routes>
-          <Route path="/" element={<DashboardApp />} />
-          <Route path="/inbox/*" element={<div>Inbox</div>} />
-          <Route path="/goals/*" element={<div>Goals</div>} />
-          <Route path="/milestones/*" element={<div>Milestones</div>} />
-          <Route path="/projects/*" element={<div>Projects</div>} />
-          <Route path="/tags/*" element={<div>Tags</div>} />
-        </Routes>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<DashboardApp />} />
+            <Route path="/inbox/*" element={<InboxApp />} />
+            <Route path="/goals/*" element={<div>Goals</div>} />
+            <Route path="/milestones/*" element={<div>Milestones</div>} />
+            <Route path="/projects/*" element={<div>Projects</div>} />
+            <Route path="/tags/*" element={<div>Tags</div>} />
+          </Routes>
+        </Suspense>
       </div>
     </div>
   )

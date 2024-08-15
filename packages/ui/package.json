@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "exports": {
-    "./styles.css": "./dist/index.css",
     "./components": "./src/components/index.ts",
-    "./hooks": "./src/hooks/index.ts"
+    "./hooks": "./src/hooks/index.ts",
+    "./icons": "./src/icons/index.ts",
+    "./styles.css": "./dist/index.css"
   },
   "scripts": {
     "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",

@@ -1,7 +1,7 @@
 import "@repo/ui/styles.css"
 import * as React from "react"
 import * as ReactDOM from "react-dom/client"
-import { BrowserRouter } from "react-router-dom"
+import { HashRouter } from "react-router-dom"
 import ShellApp from "./components/shell-app"
 import "./index.css"
 
@@ -11,8 +11,8 @@ const root = ReactDOM.createRoot(document.getElementById("root") as  ReactDOM.Co
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <ShellApp />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 )

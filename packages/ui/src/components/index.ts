@@ -1,3 +1,4 @@
+import GenericLoader from "./generic-loader"
 import { Button, buttonVariants } from "./ui/button"
 import {
   Toast,
@@ -14,15 +15,15 @@ import Toaster from "./ui/toaster"
 
 export {
   Button,
-  buttonVariants,
-  Toast,
+  buttonVariants, GenericLoader, Toast,
   ToastAction,
   ToastClose,
   ToastDescription,
   Toaster,
   ToastProvider,
   ToastTitle,
-  ToastViewport, type ToastActionElement,
+  ToastViewport,
+  type ToastActionElement,
   type ToastProps
 }
 

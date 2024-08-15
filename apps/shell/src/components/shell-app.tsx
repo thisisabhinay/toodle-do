@@ -1,3 +1,4 @@
+import { GenericLoader } from "@repo/ui/components"
 import React, { lazy, Suspense } from "react"
 import { Route, Routes } from "react-router-dom"
 import sidebarList from "../config/sidebar"
@@ -17,7 +18,7 @@ const ShellApp: React.FC = () => {
       </div>
 
       <div className="p-10">
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<GenericLoader/>}>
           <Routes>
             <Route path="/" element={<DashboardApp />} />
             <Route path="/inbox/*" element={<InboxApp />} />

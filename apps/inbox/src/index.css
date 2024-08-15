@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .container {
+    @apply px-5
+  }
+
+  .container-item {
+    @apply -mx-5
+  }
+}

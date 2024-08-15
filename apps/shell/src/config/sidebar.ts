@@ -37,7 +37,7 @@ const sidebarList: SidebarItem[] = [
   {
     href: "/projects",
     key: "projects",
-    label: "Project",
+    label: "Projects",
     icon: React.createElement(FolderGit2, { className: "mr-2 size-4" })
   },
   {

@@ -17,7 +17,7 @@ const ShellApp: React.FC = () => {
         <Sidebar list={sidebarList} />
       </div>
 
-      <div className="p-10">
+      <div className="py-10 px-4 w-full max-w-screen-md mx-auto">
         <Suspense fallback={<GenericLoader/>}>
           <Routes>
             <Route path="/" element={<DashboardApp />} />

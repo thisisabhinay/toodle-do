@@ -53,7 +53,7 @@ module.exports = {
       name: "inbox",
       filename: "remoteEntry.js",
       exposes: {
-        "./InboxIndex": "./src/inbox-app.tsx"
+        "./InboxIndex": "./src/components/inbox-app.tsx"
       },
       shared: {
         ...deps,

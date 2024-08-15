@@ -23,9 +23,9 @@ const InboxInput: React.FC<InboxInputProps> = ({callback}) => {
       />
       <p className="text-xs w-full text-muted-foreground">
         Press{" "}
-        <pre className="inline-block rounded-sm border border-solid border-slate-300 px-1 bg-slate-100 text-xs font-mono">
+        <span className="inline-block rounded-sm border border-solid border-slate-300 px-1 bg-slate-100 text-xs font-mono">
           Enter
-        </pre>{" "}
+        </span>{" "}
         to add each item as a separate entry in your inbox.
       </p>
       <Button className="w-fit mt-3" onClick={clickHandler}>

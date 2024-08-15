@@ -50,11 +50,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "shell",
+      name: "inbox",
       filename: "remoteEntry.js",
-      remotes: {
-        dashboard: "dashboard@http://localhost:4001/remoteEntry.js",
-        inbox: "inbox@http://localhost:4002/remoteEntry.js"
+      exposes: {
+        "./InboxIndex": "./src/inbox-app.tsx"
       },
       shared: {
         ...deps,
@@ -65,7 +64,7 @@ module.exports = {
         "react-dom": {
           singleton: true,
           requiredVersion: deps["react-dom"]
-        },
+        }
       }
     }),
     new HtmlWebpackPlugin({
@@ -77,6 +76,6 @@ module.exports = {
       directory: path.join(__dirname, "public")
     },
     compress: true,
-    port: 4000
+    port: 4002
   }
 }

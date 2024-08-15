@@ -4,7 +4,7 @@ import "@repo/ui/styles.css"
 import React, { Suspense } from "react"
 import "./index.css"
 
-const DashboardApp: React.FC = () => {
+const InboxApp: React.FC = () => {
   const { toast } = useToast()
 
   function clickHandler() {
@@ -15,10 +15,10 @@ const DashboardApp: React.FC = () => {
   }
 
   return (
-    <Suspense fallback={<div>Dashboard is Loading...</div>}>
-      <div id="DashboardApp">
+    <Suspense fallback={<div>Inbox is Loading...</div>}>
+      <div id="InboxApp">
         <div className="flex flex-col gap-4">
-          <h1 className="text-xl font-semibold">Dashboard</h1>
+          <h1 className="text-xl font-semibold">Inbox</h1>
           <Button onClick={clickHandler} className="w-fit">
             Show Toast
           </Button>
@@ -29,4 +29,4 @@ const DashboardApp: React.FC = () => {
   )
 }
 
-export default DashboardApp
+export default InboxApp

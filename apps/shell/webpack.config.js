@@ -65,7 +65,7 @@ module.exports = {
         "react-dom": {
           singleton: true,
           requiredVersion: deps["react-dom"]
-        },
+        }
       }
     }),
     new HtmlWebpackPlugin({
@@ -77,6 +77,7 @@ module.exports = {
       directory: path.join(__dirname, "public")
     },
     compress: true,
-    port: 4000
+    port: 4000,
+    historyApiFallback: true
   }
 }

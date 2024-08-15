@@ -1,11 +1,12 @@
 {
   "extends": "@repo/typescript-config/react-library.json",
-  "include": ["src", "turbo"],
+  "include": ["src", "turbo", "**/*.test.(js|ts)", "**/*.test.(jsx|tsx)"],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["jest", "@testing-library/jest-dom"]
   }
 }

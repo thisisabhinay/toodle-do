@@ -13,20 +13,33 @@
     "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
     "gc": "turbo gen react-component",
     "lint": "eslint src/",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-react": "^7.24.7",
     "@repo/eslint-config": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
     "@turbo/gen": "^1.12.4",
     "@types/eslint": "^8.56.5",
+    "@types/jest": "^29.5.12",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
+    "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
+    "babel-jest": "^29.7.0",
     "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.4.41",
     "tailwindcss": "^3.4.9",
+    "ts-jest": "^29.2.4",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
@@ -34,6 +47,7 @@
     "react-dom": "^18.3.1"
   },
   "dependencies": {
+    "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-toast": "^1.2.1",
